@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ASDAWARE.CC</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="labels">
+            <a class="label">AsdaWare.CC</a>
+        </div>
+        <div class="container">
+            <div class="card" style="--clr:#fff;" data-tilt></div>
+            <div class="buttons">
+                <a href="#" class="btn" onclick="location.href='https://download941.mediafire.com/80lh2hfb0wqgOg25P6-VinW1N5S7hbP013HqBfOBdGrbju7-EoD8M2GYUOKwp7EhM7lgs1HLYiMuE8vY66DCme6sri5BrejYYDwHNiFpO_ZdLiKkP5DW2-7zvYStSN5WA67LDRoMAyn23OZxQ4_uK9z9tlXzehz-uoc7d9yh5PPj/2dkk02yb15jnl10/AsdaWare.CC.zip'">Download</a>
+                <a href="#" class="btn" onclick="location.href='https://discord.gg/WYKecYaWVX'">Discord</a>
+            </div>
+        </div>
+        <script>
+            let card = document.querySelectorAll('.card');
+            card.forEach(card =>{
+                card.onmousemove = function(e){
+                    let x = e.pageX - card.offsetLeft;
+                    let y = e.pageY - card.offsetTop;
+
+                    card.style.setProperty('--x', x + 'px');
+                    card.style.setProperty('--y', y + 'px');
+                }
+            })
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    </body>
+</html>

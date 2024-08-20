@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    background-size: cover;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 810px;
+    height: 357px;
+    background: rgba(255, 255, 255, 0.25);
+    background-image: url(https://cdn.discordapp.com/attachments/1269761417733607434/1275455914056613888/Capture_decran_2024-08-20_153307_1.png?ex=66c5f462&is=66c4a2e2&hm=e998c615e390a08fc793d3a370855927f56d1a03d520095cf1ce39c0d10ee9f1&);
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    overflow: hidden;
+    margin-top: 350px;
+}
+
+.container .card::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+}
+
+.container .card:hover::before {
+    opacity: 1;
+}
+
+.container .card::after {
+    content: '';
+    position: absolute;
+    inset: 0px;
+    border-radius: 0px;
+    background-image: url(https://cdn.discordapp.com/attachments/1269761417733607434/1275454368694407228/Capture_decran_2024-08-20_153307.png?ex=66c5f2f2&is=66c4a172&hm=6a5f294702af685bd16f64bd9fef939a8f34e83df9b7df87ce0333b7b39f9a2d&);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #1c2a44;
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+    margin-bottom: 50px;
+}
+
+.btn:first-of-type {
+    background-color: #0A0A0A;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.label {
+    font-family: 'Franklin Gothic gras', 'Arial Narrow', Arial, sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
